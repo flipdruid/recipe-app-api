@@ -12,3 +12,51 @@ docker-compose run --rm app sh -c "python manage.py wait_for_db"
 
 docker-compose run --rm app sh -c "python manage.py wait_for_db && flake8"
 
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+
+docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
+
+
+
+remove current volume
+docker volume rm recipe-app-api_dev-db-data
+
+
+docker-compose -f docker-compose.yml down --remove-orphans
+docker-compose -f docker-compose.yml build
+docker-compose -f docker-compose.yml up -d
+
+docker-compose -f docker-compose.yml logs -f app
+
+xuser@example.com
+123456
+wepnot
+
+{
+  "token": "1ab3e7b34c6e1d1b30adb9a6b302592cabc3c98c"
+}
+
+{
+  "email": "user5@example.com",
+  "password": "password5",
+  "name": "User 5"
+}
+3b0869f3eac877461c6962fb5ae926ff5a0dddef
+
+COLLECT STATIC
+python manage.py collectstatic
+
+Use
+DRF Spectacular extend_schema_view decorator
+
+dockerfile
+linux-headers is requirements for uWSGI installation
+
+sudo yum install git -y
+
+sudo amazon-linux-extras install docker -y
+or
+sudo yum install docker -y
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo usermod -aG docker ec2-user
