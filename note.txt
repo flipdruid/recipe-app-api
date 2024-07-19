@@ -60,3 +60,8 @@ sudo yum install docker -y
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 sudo usermod -aG docker ec2-user
+
+
+error:
+[51912] Error loading Python lib '/tmp/_MEIF65BQP/libpython3.7m.so.1.0': dlopen: libcrypt.so.1: cannot open shared object file: No such file or directory
+Solution: sudo dnf install libxcrypt-compat
